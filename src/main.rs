@@ -1,7 +1,11 @@
-mod ownership;
+mod memory;
 mod random;
+mod ownership;
+mod word;
+mod user;
+mod rectangle;
 
 fn main() {
-    ownership::string_test();
+    rectangle::main();
     // random::guess_game();
 }
