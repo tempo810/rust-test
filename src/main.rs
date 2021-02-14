@@ -4,10 +4,12 @@ mod ownership;
 mod word;
 mod user;
 mod rectangle;
+mod reader;
 
 fn main() {
-    let s1 = String::from("Hello, ");
-    let s2 = String::from("world!");
-    let s3 = s1 + &s2;
-    println!("{}", s3);
+    let s = reader::read_from_file("test_v2.txt").unwrap_or_else(|error| error.to_string());
+    println!("{}", s);
+    reader::read_v2("test_v2.txt");
+    let s = reader::read_from_file("test_v2.txt").unwrap_or_else(|error| error.to_string());
+    println!("{}", s);
 }
