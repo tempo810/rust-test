@@ -6,6 +6,8 @@ mod user;
 mod rectangle;
 
 fn main() {
-    rectangle::main();
-    // random::guess_game();
+    let s1 = String::from("Hello, ");
+    let s2 = String::from("world!");
+    let s3 = s1 + &s2;
+    println!("{}", s3);
 }
